@@ -160,12 +160,12 @@ class jp2convert_func:
         self.format_combo.bind("<<ComboboxSelected>>", self.on_format_changed)
     
     def get_text(self, key):
-        """현재 언어에 맞는 텍스트를 반환"""
+        #현재 언어에 맞는 텍스트를 반환
         lang = self.current_language.get()
         return self.translations[lang].get(key, key)
     
     def update_format_list(self):
-        """현재 언어에 맞게 출력 형식 목록 업데이트"""
+        #현재 언어에 맞게 이미지 출력 목록 업데이트
         lang = self.current_language.get()
         self.formats = [
             self.translations[lang]["png_format"],
@@ -175,12 +175,12 @@ class jp2convert_func:
             self.translations[lang]["webp_format"]
         ]
         
-        # 처음 실행 시 출력 형식 설정
+        # 처음 실행 시 이미지 출력 설정
         if not self.output_format.get():
             self.output_format.set(self.formats[0])
     
     def update_language(self):
-        """언어 변경 시 UI 텍스트 업데이트"""
+        """        언어 변경 시 UI 텍스트 업데이트        """
         # 창 제목 업데이트
         self.root.title(self.get_text("title"))
         
