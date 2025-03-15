@@ -1,4 +1,4 @@
-# convert-jp2-to-jpg
+# convert-jp2-to-jpg-png-webp
 convert jp2 to jpg, PNG, TIFF, BMP, WEBP
 
 After selecting files, you can convert all JP2s in that folder to JPEG, PNG, TIFF, BMP, WEBP at once.
